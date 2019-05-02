@@ -24,44 +24,44 @@
     transform: rotate(712deg);
   }
 
-  100% {
+  10% {
     transform: rotate(705deg);
   }
 }
 @keyframes gauge-fit-animation {
   0% {
-    top: 0.00em;
-    left: 0.00em;
+    top: 0%;
+    left: 0%;
   }
 
   15% {
-    top: -0.15em;
-    left: 0.08em;
+    top: -15%;
+    left: 8%;
   }
 
   30% {
-    top: -0.25em;
-    left: 0.25em;
+    top: -25%;
+    left: 25%;
   }
 
   43% {
-    top: 0.17em;
-    left: 0.20em;
+    top: 17%;
+    left: 20%;
   }
 
   55% {
-    top: 0.13em;
-    left: -0.17em;
+    top: 13%;
+    left: -17%;
   }
 
   65% {
-    top: 0.00em;
-    left: 0.00em;
+    top: 0%;
+    left: 0%;
   }
 
   85% {
-    top: 0.00em;
-    left: 0.00em;
+    top: 0%;
+    left: 0%;
   }
 }
 @keyframes gauge-quality-animation {
@@ -93,7 +93,7 @@
     transform: rotate(14.2deg);
   }
 
-  100% {
+  10% {
     transform: rotate(13.6deg);
   }
 }
@@ -103,7 +103,7 @@
     transform: rotate(180deg) scale(2.5, 2.3) rotateY(0);
   }
 
-  100% {
+  10% {
     opacity: 1;
     transform: rotate(180deg) scale(1, 1) rotateY(0);
   }
