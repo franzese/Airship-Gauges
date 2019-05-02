@@ -110,13 +110,13 @@ html {
           }
         }
         // PERFECT FIT GAUGE
-        &.fit {
-          background-image: url("../images/gauge-fit-bg.svg");
+        &.reticle {
+          background-image: url("../images/gauge-reticle-bg.svg");
 
           .detail {
             opacity: 0.4;
             z-index: -1;
-            background-image: url("../images/gauge-fit-detail.svg");
+            background-image: url("../images/gauge-reticle-detail.svg");
             transition: opacity 120ms ease-in;
           }
         }
@@ -368,10 +368,10 @@ html {
             }
           }
 
-          &.fit {
+          &.reticle {
             .detail {
               animation: {
-                name: gauge-fit-animation;
+                name: gauge-reticle-animation;
                 duration: 5s;
                 iteration-count: infinite;
                 delay: 120ms;
