@@ -122,187 +122,185 @@ html {
         }
         // MOISTURE MANAGEMENT GAUGE
         &.barometer {
-          .border {
-            box-shadow: 0 0 0 2px $color-dark;
-            position: absolute;
-            border-radius: 100%;
-            opacity: 0;
-          }
-
-          .raindrop {
-            margin-left: -2em;
-            margin-top: -1em;
-            background: {
-              color: $color-dark;
-              image: url("../images/gauge-barometer-raindrop.png");
-              position: center center;
-              size: 1000%;
-            }
-            transform: rotate(180deg) rotateY(0);
-            transition: background-size 1s;
-            position: absolute;
-            border-radius: 100%;
-            opacity: 0;
-          }
-
-          .raindrops {
-            #border-1,
-            #raindrop-1 {
-              left: 21em;
-              top: 64em;
-              height: 6.42em;
-              animation-delay: 1.7s;
-            }
-
-            #border-1 {
-              width: 4.4em;
-              box-shadow: 0 0 0 0.8px $color-dark;
-            }
-
-            #raindrop-1 {
-              width: 6em;
-              background-position: 50.8% 11.6%;
-            }
-
-            #border-2,
-            #raindrop-2 {
-              left: 42em;
-              top: 79em;
-              height: 13.92em;
-              animation-delay: 0.5s;
-            }
-
-            #border-2 {
-              width: 6.8em;
-              box-shadow: -1px 0 0 2.6px $color-dark;
-            }
-
-            #raindrop-2 {
-              width: 12em;
-              background-position: 39.7% 18.3%;
-            }
-
-            #border-3,
-            #raindrop-3 {
-              left: 70em;
-              top: 74em;
-              height: 10.6em;
-              animation-delay: 0.66s;
-            }
-
-            #border-3 {
-              width: 6em;
-              box-shadow: 0 0 0 2px $color-dark;
-            }
-
-            #raindrop-3 {
-              width: 10em;
-              background-position: 49.5% 13.6%;
-            }
-
-            #border-4,
-            #raindrop-4 {
-              left: 63em;
-              top: 49em;
-              height: 11.77em;
-              animation-delay: 1.6s;
-            }
-
-            #border-4 {
-              width: 6.4em;
-              box-shadow: 0 0 0 2.3px $color-dark;
-            }
-
-            #raindrop-4 {
-              width: 11em;
-              background-position: 43.0% 22.1%;
-            }
-
-            #border-5,
-            #raindrop-5 {
-              left: 22em;
-              top: 35em;
-              height: 7.63em;
-              animation-delay: 1.3s;
-            }
-
-            #border-5 {
-              width: 4.8em;
-              box-shadow: 0 0 0 1.1px $color-dark;
-            }
-
-            #raindrop-5 {
-              width: 7em;
-              background-position: 52.3% 8.2%;
-            }
-
-            #border-6,
-            #raindrop-6 {
-              left: 83em;
-              top: 54em;
-              height: 10.35em;
-              animation-delay: 2.2s;
-            }
-
-            #border-6 {
-              width: 5.6em;
-              box-shadow: 0 0 0 1.7px $color-dark;
-            }
-
-            #raindrop-6 {
-              width: 9em;
-              background-position: 39.4% 10.1%;
-            }
-
-            #border-7,
-            #raindrop-7 {
-              left: 60em;
-              top: 23em;
-              height: 10em;
-              animation-delay: 0.75s;
-            }
-
-            #border-7 {
-              width: 5.6em;
-              box-shadow: 0 0 0 1.7px $color-dark;
-            }
-
-            #raindrop-7 {
-              width: 9em;
-              background-position: 45.7% 10.8%;
-            }
-
-            #border-8,
-            #raindrop-8 {
-              left: 37em;
-              top: 36em;
-              height: 10.6em;
-              animation-delay: 1s;
-            }
-
-            #border-8 {
-              width: 6em;
-              box-shadow: 0 0 0 2px $color-dark;
-            }
-
-            #raindrop-8 {
-              width: 10em;
-              background-position: 49.5% 13.6%;
-            }
-          }
-
           .detail {
-            &.fg {
-              background-image: url("../images/gauge-cover.svg");
-              z-index: 4;
-            }
-
             &.raindrops {
               z-index: 5;
               font-size: 1px;
               transform: rotateY(0);
               transition: filter 600ms;
               filter: blur(1px) brightness(1.3);
+
+              .border {
+                box-shadow: 0 0 0 2px $color-dark;
+                position: absolute;
+                border-radius: 100%;
+                opacity: 0;
+              }
+
+              .raindrop {
+                margin-left: -2px;
+                margin-top: -1px;
+                background: {
+                  color: $color-dark;
+                  image: url("../images/gauge-barometer-raindrop.png");
+                  position: center center;
+                  size: 1000%;
+                }
+                transform: rotate(180deg) rotateY(0);
+                transition: background-size 1s;
+                position: absolute;
+                border-radius: 100%;
+                opacity: 0;
+              }
+
+              #border-1,
+              #raindrop-1 {
+                left: 21em;
+                top: 64em;
+                height: 6.42em;
+                animation-delay: 1.7s;
+              }
+
+              #border-1 {
+                width: 4.4em;
+                box-shadow: 0 0 0 0.8px $color-dark;
+              }
+
+              #raindrop-1 {
+                width: 6em;
+                background-position: 50.8% 11.6%;
+              }
+
+              #border-2,
+              #raindrop-2 {
+                left: 42em;
+                top: 79em;
+                height: 13.92em;
+                animation-delay: 0.5s;
+              }
+
+              #border-2 {
+                width: 6.8em;
+                box-shadow: -1px 0 0 2.6px $color-dark;
+              }
+
+              #raindrop-2 {
+                width: 12em;
+                background-position: 39.7% 18.3%;
+              }
+
+              #border-3,
+              #raindrop-3 {
+                left: 70em;
+                top: 74em;
+                height: 10.6em;
+                animation-delay: 0.66s;
+              }
+
+              #border-3 {
+                width: 6em;
+                box-shadow: 0 0 0 2px $color-dark;
+              }
+
+              #raindrop-3 {
+                width: 10em;
+                background-position: 49.5% 13.6%;
+              }
+
+              #border-4,
+              #raindrop-4 {
+                left: 63em;
+                top: 49em;
+                height: 11.77em;
+                animation-delay: 1.6s;
+              }
+
+              #border-4 {
+                width: 6.4em;
+                box-shadow: 0 0 0 2.3px $color-dark;
+              }
+
+              #raindrop-4 {
+                width: 11em;
+                background-position: 43.0% 22.1%;
+              }
+
+              #border-5,
+              #raindrop-5 {
+                left: 22em;
+                top: 35em;
+                height: 7.63em;
+                animation-delay: 1.3s;
+              }
+
+              #border-5 {
+                width: 4.8em;
+                box-shadow: 0 0 0 1.1px $color-dark;
+              }
+
+              #raindrop-5 {
+                width: 7em;
+                background-position: 52.3% 8.2%;
+              }
+
+              #border-6,
+              #raindrop-6 {
+                left: 83em;
+                top: 54em;
+                height: 10.35em;
+                animation-delay: 2.2s;
+              }
+
+              #border-6 {
+                width: 5.6em;
+                box-shadow: 0 0 0 1.7px $color-dark;
+              }
+
+              #raindrop-6 {
+                width: 9em;
+                background-position: 39.4% 10.1%;
+              }
+
+              #border-7,
+              #raindrop-7 {
+                left: 60em;
+                top: 23em;
+                height: 10em;
+                animation-delay: 0.75s;
+              }
+
+              #border-7 {
+                width: 5.6em;
+                box-shadow: 0 0 0 1.7px $color-dark;
+              }
+
+              #raindrop-7 {
+                width: 9em;
+                background-position: 45.7% 10.8%;
+              }
+
+              #border-8,
+              #raindrop-8 {
+                left: 37em;
+                top: 36em;
+                height: 10.6em;
+                animation-delay: 1s;
+              }
+
+              #border-8 {
+                width: 6em;
+                box-shadow: 0 0 0 2px $color-dark;
+              }
+
+              #raindrop-8 {
+                width: 10em;
+                background-position: 49.5% 13.6%;
+              }
+            }
+
+            &.fg {
+              background-image: url("../images/gauge-cover.svg");
+              z-index: 4;
             }
 
             &.fog {
