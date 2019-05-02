@@ -125,7 +125,6 @@ html {
           .detail {
             &.raindrops {
               z-index: 5;
-              font-size: 1px;
               transform: rotateY(0);
               transition: filter 600ms;
               filter: blur(1px) brightness(1.3);
@@ -155,145 +154,145 @@ html {
 
               #border-1,
               #raindrop-1 {
-                left: 21em;
-                top: 64em;
-                height: 6.42em;
+                left: 2.1rem;
+                top: 6.4rem;
+                height: 0.64rem;
                 animation-delay: 1.7s;
               }
 
               #border-1 {
-                width: 4.4em;
+                width: 0.44rem;
                 box-shadow: 0 0 0 0.8px $color-dark;
               }
 
               #raindrop-1 {
-                width: 6em;
+                width: 0.6rem;
                 background-position: 50.8% 11.6%;
               }
 
               #border-2,
               #raindrop-2 {
-                left: 42em;
-                top: 79em;
-                height: 13.92em;
+                left: 4.2rem;
+                top: 7.9rem;
+                height: 1.39rem;
                 animation-delay: 0.5s;
               }
 
               #border-2 {
-                width: 6.8em;
+                width: 0.68rem;
                 box-shadow: -1px 0 0 2.6px $color-dark;
               }
 
               #raindrop-2 {
-                width: 12em;
+                width: 1.2rem;
                 background-position: 39.7% 18.3%;
               }
 
               #border-3,
               #raindrop-3 {
-                left: 70em;
-                top: 74em;
-                height: 10.6em;
+                left: 7.0rem;
+                top: 7.4rem;
+                height: 1.06rem;
                 animation-delay: 0.66s;
               }
 
               #border-3 {
-                width: 6em;
+                width: 0.6rem;
                 box-shadow: 0 0 0 2px $color-dark;
               }
 
               #raindrop-3 {
-                width: 10em;
+                width: 1.0rem;
                 background-position: 49.5% 13.6%;
               }
 
               #border-4,
               #raindrop-4 {
-                left: 63em;
-                top: 49em;
-                height: 11.77em;
+                left: 6.3rem;
+                top: 4.9rem;
+                height: 1.17rem;
                 animation-delay: 1.6s;
               }
 
               #border-4 {
-                width: 6.4em;
+                width: 0.64rem;
                 box-shadow: 0 0 0 2.3px $color-dark;
               }
 
               #raindrop-4 {
-                width: 11em;
+                width: 1.1rem;
                 background-position: 43.0% 22.1%;
               }
 
               #border-5,
               #raindrop-5 {
-                left: 22em;
-                top: 35em;
-                height: 7.63em;
+                left: 2.2rem;
+                top: 3.5rem;
+                height: 0.76rem;
                 animation-delay: 1.3s;
               }
 
               #border-5 {
-                width: 4.8em;
+                width: 0.48rem;
                 box-shadow: 0 0 0 1.1px $color-dark;
               }
 
               #raindrop-5 {
-                width: 7em;
+                width: 0.7rem;
                 background-position: 52.3% 8.2%;
               }
 
               #border-6,
               #raindrop-6 {
-                left: 83em;
-                top: 54em;
-                height: 10.35em;
+                left: 8.3rem;
+                top: 5.4rem;
+                height: 1.03rem;
                 animation-delay: 2.2s;
               }
 
               #border-6 {
-                width: 5.6em;
+                width: 0.56rem;
                 box-shadow: 0 0 0 1.7px $color-dark;
               }
 
               #raindrop-6 {
-                width: 9em;
+                width: 0.9rem;
                 background-position: 39.4% 10.1%;
               }
 
               #border-7,
               #raindrop-7 {
-                left: 60em;
-                top: 23em;
-                height: 10em;
+                left: 6.0rem;
+                top: 2.3rem;
+                height: 1.0rem;
                 animation-delay: 0.75s;
               }
 
               #border-7 {
-                width: 5.6em;
+                width: 0.56rem;
                 box-shadow: 0 0 0 1.7px $color-dark;
               }
 
               #raindrop-7 {
-                width: 9em;
+                width: 0.9rem;
                 background-position: 45.7% 10.8%;
               }
 
               #border-8,
               #raindrop-8 {
-                left: 37em;
-                top: 36em;
-                height: 10.6em;
+                left: 3.7rem;
+                top: 3.6rem;
+                height: 1.06rem;
                 animation-delay: 1s;
               }
 
               #border-8 {
-                width: 6em;
+                width: 0.6rem;
                 box-shadow: 0 0 0 2px $color-dark;
               }
 
               #raindrop-8 {
-                width: 10em;
+                width: 1.0rem;
                 background-position: 49.5% 13.6%;
               }
             }
