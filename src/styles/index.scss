@@ -32,7 +32,7 @@ html, body {
         font-size: 1.5rem;
       }
 
-      .gauge-bg {
+      .gauge-bezel {
         display: inline-block;
         position: relative;
         float: left;
@@ -127,7 +127,7 @@ html, body {
             margin-top: -1em;
             background: {
               color: $color-dark;
-              image: url("../images/gauge-moisture-detail2.png");
+              image: url("../images/gauge-moisture-raindrop.png");
               position: center center;
               size: 1000%;
             }
@@ -311,27 +311,26 @@ html, body {
               z-index: 1;
             }
 
-            &.detail2 {
-              background-image: url("../images/gauge-moisture-detail2.svg");
+            &.fixed-needle {
+              background-image: url("../images/gauge-moisture-fixed-needle.svg");
               transform: rotate(40deg);
               z-index: 0;
             }
 
-            &.detail3 {
-              background-image: url("../images/gauge-moisture-detail3.svg");
+            &.moving-needle {
+              background-image: url("../images/gauge-moisture-moving-needle.svg");
               transform: rotate(10deg);
               transition: all 2.5s ease-in-out;
               z-index: 0;
             }
 
             &.bg {
-              background-image: url("../images/gauge-moisture-detail.svg");
-              background-size: 100%;
+              background: {
+                image: url("../images/gauge-moisture-detail.svg");
+                size: 94%;
+                position: center;
+              }
               z-index: -1;
-              top: 0.05em;
-              left: 0.05em;
-              height: 90%;
-              width: 90%;
             }
           }
         }
@@ -386,7 +385,7 @@ html, body {
                 opacity: 0.85;
               }
 
-              &.detail3 {
+              &.moving-needle {
                 transform: rotate(-80deg);
               }
             }
