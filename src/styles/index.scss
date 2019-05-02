@@ -16,7 +16,7 @@ body {
       padding: 1rem 2rem;
       cursor: default;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
 
       h2,
       h3,
@@ -30,466 +30,468 @@ body {
       p {
         font-size: 1.5rem;
       }
-    }
 
-    .gauge-bg {
-      display: inline-block;
-      position: relative;
-      float: left;
-      font-size: 100px;
-      margin-right: 2rem;
-      height: 1.1em;
-      width: 1.1em;
-      min-width: 1.1em;
-      z-index: 1;
-    }
-
-    .gauge {
-      overflow: hidden;
-      border-radius: 0.1em;
-      width: 100%;
-      height: 100%;
-      position: relative;
-      display: inline-block;
-      background: {
-        repeat: no-repeat;
-        size: 100%;
-      }
-
-      .bg {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background: $color-light;
-        z-index: -10;
-        border-radius: 100%;
-      }
-
-      .detail {
-        width: 100%;
-        height: 100%;
+      .gauge-bg {
         display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        position: absolute;
-        animation-timing-function: ease-in-out;
-        left: 0;
-        top: 0;
+        position: relative;
+        float: left;
+        font-size: 100px;
+        margin-right: 2rem;
+        height: 1.1em;
+        width: 1.1em;
+        min-width: 1.1em;
+        z-index: 1;
       }
-      // STRATEGIC SEPARATION GAUGE
-      &.compass {
-        background-image: url("../images/gauge-compass-bg.svg");
 
-        .detail {
-          background-image: url("../images/gauge-compass-detail.svg");
-          transform: rotate(-20deg);
-          z-index: 1;
+      .gauge {
+        overflow: hidden;
+        border-radius: 0.1em;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: inline-block;
+        background: {
+          repeat: no-repeat;
+          size: 100%;
         }
-      }
-      // QUALITY MATERIALS GAUGE
-      &.quality {
-        background-image: url("../images/gauge-quality-bg.svg");
 
-        .detail {
-          background-image: url("../images/gauge-quality-detail.svg");
-          height: 200%;
-          width: 200%;
-          top: -0.55em;
-          left: 0.1em;
-          transform: rotate(0deg);
-          transition: all 120ms ease-in;
-        }
-      }
-      // PERFECT FIT GAUGE
-      &.fit {
-        background-image: url("../images/gauge-fit-bg.svg");
-
-        .detail {
-          opacity: 0.4;
-          z-index: -1;
-          background-image: url("../images/gauge-fit-detail.svg");
-          transition: opacity 120ms ease-in;
-        }
-      }
-      // MOISTURE MANAGEMENT GAUGE
-      &.moisture {
-        .border {
-          box-shadow: 0 0 0 2px $color-dark;
+        .bg {
           position: absolute;
+          height: 100%;
+          width: 100%;
+          background: $color-light;
+          z-index: -10;
           border-radius: 100%;
-          opacity: 0;
         }
 
-        .raindrop {
-          margin-left: -2em;
-          margin-top: -1em;
+        .detail {
+          width: 100%;
+          height: 100%;
+          display: inline-block;
           background: {
-            color: $color-dark;
-            image: url("../images/gauge-moisture-detail2.png");
-            position: center center;
-            size: 1000%;
+            repeat: no-repeat;
+            size: 100%;
           }
-          transform: rotate(180deg) rotateY(0);
-          transition: background-size 1s;
           position: absolute;
-          border-radius: 100%;
-          opacity: 0;
+          animation-timing-function: ease-in-out;
+          left: 0;
+          top: 0;
         }
+        // STRATEGIC SEPARATION GAUGE
+        &.compass {
+          background-image: url("../images/gauge-compass-bg.svg");
 
-        .raindrops {
-          #border-1,
-          #raindrop-1 {
-            left: 21em;
-            top: 64em;
-            height: 6.42em;
-            animation-delay: 1.7s;
-          }
-
-          #border-1 {
-            width: 4.4em;
-            box-shadow: 0 0 0 0.8px $color-dark;
-          }
-
-          #raindrop-1 {
-            width: 6em;
-            background-position: 50.8% 11.6%;
-          }
-
-          #border-2,
-          #raindrop-2 {
-            left: 42em;
-            top: 79em;
-            height: 13.92em;
-            animation-delay: 0.5s;
-          }
-
-          #border-2 {
-            width: 6.8em;
-            box-shadow: -1px 0 0 2.6px $color-dark;
-          }
-
-          #raindrop-2 {
-            width: 12em;
-            background-position: 39.7% 18.3%;
-          }
-
-          #border-3,
-          #raindrop-3 {
-            left: 70em;
-            top: 74em;
-            height: 10.6em;
-            animation-delay: 0.66s;
-          }
-
-          #border-3 {
-            width: 6em;
-            box-shadow: 0 0 0 2px $color-dark;
-          }
-
-          #raindrop-3 {
-            width: 10em;
-            background-position: 49.5% 13.6%;
-          }
-
-          #border-4,
-          #raindrop-4 {
-            left: 63em;
-            top: 49em;
-            height: 11.77em;
-            animation-delay: 1.6s;
-          }
-
-          #border-4 {
-            width: 6.4em;
-            box-shadow: 0 0 0 2.3px $color-dark;
-          }
-
-          #raindrop-4 {
-            width: 11em;
-            background-position: 43.0% 22.1%;
-          }
-
-          #border-5,
-          #raindrop-5 {
-            left: 22em;
-            top: 35em;
-            height: 7.63em;
-            animation-delay: 1.3s;
-          }
-
-          #border-5 {
-            width: 4.8em;
-            box-shadow: 0 0 0 1.1px $color-dark;
-          }
-
-          #raindrop-5 {
-            width: 7em;
-            background-position: 52.3% 8.2%;
-          }
-
-          #border-6,
-          #raindrop-6 {
-            left: 83em;
-            top: 54em;
-            height: 10.35em;
-            animation-delay: 2.2s;
-          }
-
-          #border-6 {
-            width: 5.6em;
-            box-shadow: 0 0 0 1.7px $color-dark;
-          }
-
-          #raindrop-6 {
-            width: 9em;
-            background-position: 39.4% 10.1%;
-          }
-
-          #border-7,
-          #raindrop-7 {
-            left: 60em;
-            top: 23em;
-            height: 10em;
-            animation-delay: 0.75s;
-          }
-
-          #border-7 {
-            width: 5.6em;
-            box-shadow: 0 0 0 1.7px $color-dark;
-          }
-
-          #raindrop-7 {
-            width: 9em;
-            background-position: 45.7% 10.8%;
-          }
-
-          #border-8,
-          #raindrop-8 {
-            left: 37em;
-            top: 36em;
-            height: 10.6em;
-            animation-delay: 1s;
-          }
-
-          #border-8 {
-            width: 6em;
-            box-shadow: 0 0 0 2px $color-dark;
-          }
-
-          #raindrop-8 {
-            width: 10em;
-            background-position: 49.5% 13.6%;
-          }
-        }
-
-        .detail {
-          &.fg {
-            background-image: url("../images/gauge-cover.svg");
-            z-index: 4;
-          }
-
-          &.raindrops {
-            z-index: 5;
-            font-size: 1px;
-            transform: rotateY(0);
-            transition: filter 600ms;
-            filter: blur(1px) brightness(1.3);
-          }
-
-          &.fog {
-            opacity: 0;
-            border-radius: 1em;
-            background-color: $color-light;
-            overflow: hidden;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
+          .detail {
+            background-image: url("../images/gauge-compass-detail.svg");
+            transform: rotate(-20deg);
             z-index: 1;
           }
+        }
+        // QUALITY MATERIALS GAUGE
+        &.quality {
+          background-image: url("../images/gauge-quality-bg.svg");
 
-          &.detail2 {
-            background-image: url("../images/gauge-moisture-detail2.svg");
-            transform: rotate(40deg);
-            z-index: 0;
+          .detail {
+            background-image: url("../images/gauge-quality-detail.svg");
+            height: 200%;
+            width: 200%;
+            top: -0.55em;
+            left: 0.1em;
+            transform: rotate(0deg);
+            transition: all 120ms ease-in;
           }
+        }
+        // PERFECT FIT GAUGE
+        &.fit {
+          background-image: url("../images/gauge-fit-bg.svg");
 
-          &.detail3 {
-            background-image: url("../images/gauge-moisture-detail3.svg");
-            transform: rotate(10deg);
-            transition: all 2.5s ease-in-out;
-            z-index: 0;
-          }
-
-          &.bg {
-            background-image: url("../images/gauge-moisture-detail.svg");
-            background-size: 100%;
+          .detail {
+            opacity: 0.4;
             z-index: -1;
-            top: 0.05em;
-            left: 0.05em;
-            height: 90%;
-            width: 90%;
+            background-image: url("../images/gauge-fit-detail.svg");
+            transition: opacity 120ms ease-in;
+          }
+        }
+        // MOISTURE MANAGEMENT GAUGE
+        &.moisture {
+          .border {
+            box-shadow: 0 0 0 2px $color-dark;
+            position: absolute;
+            border-radius: 100%;
+            opacity: 0;
+          }
+
+          .raindrop {
+            margin-left: -2em;
+            margin-top: -1em;
+            background: {
+              color: $color-dark;
+              image: url("../images/gauge-moisture-detail2.png");
+              position: center center;
+              size: 1000%;
+            }
+            transform: rotate(180deg) rotateY(0);
+            transition: background-size 1s;
+            position: absolute;
+            border-radius: 100%;
+            opacity: 0;
+          }
+
+          .raindrops {
+            #border-1,
+            #raindrop-1 {
+              left: 21em;
+              top: 64em;
+              height: 6.42em;
+              animation-delay: 1.7s;
+            }
+
+            #border-1 {
+              width: 4.4em;
+              box-shadow: 0 0 0 0.8px $color-dark;
+            }
+
+            #raindrop-1 {
+              width: 6em;
+              background-position: 50.8% 11.6%;
+            }
+
+            #border-2,
+            #raindrop-2 {
+              left: 42em;
+              top: 79em;
+              height: 13.92em;
+              animation-delay: 0.5s;
+            }
+
+            #border-2 {
+              width: 6.8em;
+              box-shadow: -1px 0 0 2.6px $color-dark;
+            }
+
+            #raindrop-2 {
+              width: 12em;
+              background-position: 39.7% 18.3%;
+            }
+
+            #border-3,
+            #raindrop-3 {
+              left: 70em;
+              top: 74em;
+              height: 10.6em;
+              animation-delay: 0.66s;
+            }
+
+            #border-3 {
+              width: 6em;
+              box-shadow: 0 0 0 2px $color-dark;
+            }
+
+            #raindrop-3 {
+              width: 10em;
+              background-position: 49.5% 13.6%;
+            }
+
+            #border-4,
+            #raindrop-4 {
+              left: 63em;
+              top: 49em;
+              height: 11.77em;
+              animation-delay: 1.6s;
+            }
+
+            #border-4 {
+              width: 6.4em;
+              box-shadow: 0 0 0 2.3px $color-dark;
+            }
+
+            #raindrop-4 {
+              width: 11em;
+              background-position: 43.0% 22.1%;
+            }
+
+            #border-5,
+            #raindrop-5 {
+              left: 22em;
+              top: 35em;
+              height: 7.63em;
+              animation-delay: 1.3s;
+            }
+
+            #border-5 {
+              width: 4.8em;
+              box-shadow: 0 0 0 1.1px $color-dark;
+            }
+
+            #raindrop-5 {
+              width: 7em;
+              background-position: 52.3% 8.2%;
+            }
+
+            #border-6,
+            #raindrop-6 {
+              left: 83em;
+              top: 54em;
+              height: 10.35em;
+              animation-delay: 2.2s;
+            }
+
+            #border-6 {
+              width: 5.6em;
+              box-shadow: 0 0 0 1.7px $color-dark;
+            }
+
+            #raindrop-6 {
+              width: 9em;
+              background-position: 39.4% 10.1%;
+            }
+
+            #border-7,
+            #raindrop-7 {
+              left: 60em;
+              top: 23em;
+              height: 10em;
+              animation-delay: 0.75s;
+            }
+
+            #border-7 {
+              width: 5.6em;
+              box-shadow: 0 0 0 1.7px $color-dark;
+            }
+
+            #raindrop-7 {
+              width: 9em;
+              background-position: 45.7% 10.8%;
+            }
+
+            #border-8,
+            #raindrop-8 {
+              left: 37em;
+              top: 36em;
+              height: 10.6em;
+              animation-delay: 1s;
+            }
+
+            #border-8 {
+              width: 6em;
+              box-shadow: 0 0 0 2px $color-dark;
+            }
+
+            #raindrop-8 {
+              width: 10em;
+              background-position: 49.5% 13.6%;
+            }
+          }
+
+          .detail {
+            &.fg {
+              background-image: url("../images/gauge-cover.svg");
+              z-index: 4;
+            }
+
+            &.raindrops {
+              z-index: 5;
+              font-size: 1px;
+              transform: rotateY(0);
+              transition: filter 600ms;
+              filter: blur(1px) brightness(1.3);
+            }
+
+            &.fog {
+              opacity: 0;
+              border-radius: 1em;
+              background-color: $color-light;
+              overflow: hidden;
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 100%;
+              width: 100%;
+              z-index: 1;
+            }
+
+            &.detail2 {
+              background-image: url("../images/gauge-moisture-detail2.svg");
+              transform: rotate(40deg);
+              z-index: 0;
+            }
+
+            &.detail3 {
+              background-image: url("../images/gauge-moisture-detail3.svg");
+              transform: rotate(10deg);
+              transition: all 2.5s ease-in-out;
+              z-index: 0;
+            }
+
+            &.bg {
+              background-image: url("../images/gauge-moisture-detail.svg");
+              background-size: 100%;
+              z-index: -1;
+              top: 0.05em;
+              left: 0.05em;
+              height: 90%;
+              width: 90%;
+            }
           }
         }
       }
-    }
 
-    .gauge-wrap.on .gauge.compass .detail,
-    .gauge-wrap:hover .gauge.compass .detail {
-      animation: compass 6s infinite;
-    }
-
-    .gauge-wrap.on .gauge.quality .detail,
-    .gauge-wrap:hover .gauge.quality .detail {
-      animation: quality 120ms infinite;
-      animation-delay: 120ms;
-      transform: rotate(14deg);
-    }
-
-    .gauge-wrap.on .gauge.fit .detail,
-    .gauge-wrap:hover .gauge.fit .detail {
-      animation: fit 5s infinite;
-      animation-delay: 120ms;
-    }
-
-    .gauge-wrap.on .gauge.moisture .detail.fog,
-    .gauge-wrap:hover .gauge.moisture .detail.fog {
-      transition: opacity 3s ease-out;
-      opacity: 0.85;
-    }
-
-    .gauge-wrap.on .gauge.moisture .detail.detail3,
-    .gauge-wrap:hover .gauge.moisture .detail.detail3 {
-      transform: rotate(-80deg);
-    }
-
-    .gauge-wrap.on .gauge.moisture .border,
-    .gauge-wrap.on .gauge.moisture .raindrop,
-    .gauge-wrap:hover .gauge.moisture .border,
-    .gauge-wrap:hover .gauge.moisture .raindrop {
-      animation: raindrop-fall 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      animation-fill-mode: forwards;
-    }
-    @keyframes compass {
-      0% {
-        transform: rotate(-20deg);
+      .gauge-wrap.on .gauge.compass .detail,
+      .gauge-wrap:hover .gauge.compass .detail {
+        animation: gauge-compass-animation 6s infinite;
       }
 
-      1% {
-        transform: rotate(-40deg);
+      .gauge-wrap.on .gauge.quality .detail,
+      .gauge-wrap:hover .gauge.quality .detail {
+        animation: gauge-quality-animation 120ms infinite;
+        animation-delay: 120ms;
+        transform: rotate(14deg);
       }
 
-      10% {
-        transform: rotate(705deg);
+      .gauge-wrap.on .gauge.fit .detail,
+      .gauge-wrap:hover .gauge.fit .detail {
+        animation: gauge-fit-animation 5s infinite;
+        animation-delay: 120ms;
       }
 
-      22% {
-        transform: rotate(709deg);
+      .gauge-wrap.on .gauge.moisture .detail.fog,
+      .gauge-wrap:hover .gauge.moisture .detail.fog {
+        transition: opacity 3s ease-out;
+        opacity: 0.85;
       }
 
-      40% {
-        transform: rotate(700deg);
+      .gauge-wrap.on .gauge.moisture .detail.detail3,
+      .gauge-wrap:hover .gauge.moisture .detail.detail3 {
+        transform: rotate(-80deg);
       }
 
-      82% {
-        transform: rotate(712deg);
+      .gauge-wrap.on .gauge.moisture .border,
+      .gauge-wrap.on .gauge.moisture .raindrop,
+      .gauge-wrap:hover .gauge.moisture .border,
+      .gauge-wrap:hover .gauge.moisture .raindrop {
+        animation: raindrop-fall 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        animation-fill-mode: forwards;
       }
+      @media (max-width: 767px) {
+        .gauge-top,
+        .gauge-wrap {
+          padding-left: 0;
+          padding-right: 0;
+        }
 
-      100% {
-        transform: rotate(705deg);
+        .gauge-top p {
+          margin-left: 1em;
+        }
       }
     }
-    @keyframes fit {
-      0% {
-        top: 0.00em;
-        left: 0.00em;
-      }
+  }
+}
+@keyframes gauge-compass-animation {
+  0% {
+    transform: rotate(-20deg);
+  }
 
-      15% {
-        top: -0.15em;
-        left: 0.08em;
-      }
+  1% {
+    transform: rotate(-40deg);
+  }
 
-      30% {
-        top: -0.25em;
-        left: 0.25em;
-      }
+  10% {
+    transform: rotate(705deg);
+  }
 
-      43% {
-        top: 0.17em;
-        left: 0.20em;
-      }
+  22% {
+    transform: rotate(709deg);
+  }
 
-      55% {
-        top: 0.13em;
-        left: -0.17em;
-      }
+  40% {
+    transform: rotate(700deg);
+  }
 
-      65% {
-        top: 0.00em;
-        left: 0.00em;
-      }
+  82% {
+    transform: rotate(712deg);
+  }
 
-      85% {
-        top: 0.00em;
-        left: 0.00em;
-      }
-    }
-    @keyframes quality {
-      0% {
-        transform: rotate(14.0deg);
-      }
+  100% {
+    transform: rotate(705deg);
+  }
+}
+@keyframes gauge-fit-animation {
+  0% {
+    top: 0.00em;
+    left: 0.00em;
+  }
 
-      4% {
-        transform: rotate(13.3deg);
-      }
+  15% {
+    top: -0.15em;
+    left: 0.08em;
+  }
 
-      23% {
-        transform: rotate(14.5deg);
-      }
+  30% {
+    top: -0.25em;
+    left: 0.25em;
+  }
 
-      46% {
-        transform: rotate(13.0deg);
-      }
+  43% {
+    top: 0.17em;
+    left: 0.20em;
+  }
 
-      68% {
-        transform: rotate(14.0deg);
-      }
+  55% {
+    top: 0.13em;
+    left: -0.17em;
+  }
 
-      77% {
-        transform: rotate(12.1deg);
-      }
+  65% {
+    top: 0.00em;
+    left: 0.00em;
+  }
 
-      81% {
-        transform: rotate(14.2deg);
-      }
+  85% {
+    top: 0.00em;
+    left: 0.00em;
+  }
+}
+@keyframes gauge-quality-animation {
+  0% {
+    transform: rotate(14.0deg);
+  }
 
-      100% {
-        transform: rotate(13.6deg);
-      }
-    }
-    @keyframes raindrop-fall {
-      0% {
-        opacity: 0;
-        transform: rotate(180deg) scale(2.5, 2.3) rotateY(0);
-      }
+  4% {
+    transform: rotate(13.3deg);
+  }
 
-      100% {
-        opacity: 1;
-        transform: rotate(180deg) scale(1, 1) rotateY(0);
-      }
-    }
-    @media (max-width: 767px) {
-      .gauge-top,
-      .gauge-wrap {
-        padding-left: 0;
-        padding-right: 0;
-      }
+  23% {
+    transform: rotate(14.5deg);
+  }
 
-      .gauge-top p {
-        margin-left: 1em;
-      }
-    }
+  46% {
+    transform: rotate(13.0deg);
+  }
+
+  68% {
+    transform: rotate(14.0deg);
+  }
+
+  77% {
+    transform: rotate(12.1deg);
+  }
+
+  81% {
+    transform: rotate(14.2deg);
+  }
+
+  100% {
+    transform: rotate(13.6deg);
+  }
+}
+@keyframes raindrop-fall {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg) scale(2.5, 2.3) rotateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(180deg) scale(1, 1) rotateY(0);
   }
 }
