@@ -1,0 +1,19 @@
+@mixin raindrop($i, $height, $width, $top, $left, $bgx, $bgy, $adelay, $shadowblur) {
+  .border.border-#{$i} {
+    height: $height;
+    top: $top;
+    left: $left;
+    animation-delay: $adelay;
+    width: $width * 0.6;
+    box-shadow: 0 0 0 $shadowblur $color-dark;
+  }
+
+  .raindrop.raindrop-#{$i} {
+    height: $height;
+    top: $top;
+    left: $left;
+    animation-delay: $adelay;
+    width: $width;
+    background-position: $bgx $bgy;
+  }
+}
