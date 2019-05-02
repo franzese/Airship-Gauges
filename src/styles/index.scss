@@ -121,7 +121,7 @@ html {
           }
         }
         // MOISTURE MANAGEMENT GAUGE
-        &.moisture {
+        &.barometer {
           .border {
             box-shadow: 0 0 0 2px $color-dark;
             position: absolute;
@@ -134,7 +134,7 @@ html {
             margin-top: -1em;
             background: {
               color: $color-dark;
-              image: url("../images/gauge-moisture-raindrop.png");
+              image: url("../images/gauge-barometer-raindrop.png");
               position: center center;
               size: 1000%;
             }
@@ -319,13 +319,13 @@ html {
             }
 
             &.fixed-needle {
-              background-image: url("../images/gauge-moisture-fixed-needle.svg");
+              background-image: url("../images/gauge-barometer-fixed-needle.svg");
               transform: rotate(40deg);
               z-index: 0;
             }
 
             &.moving-needle {
-              background-image: url("../images/gauge-moisture-moving-needle.svg");
+              background-image: url("../images/gauge-barometer-moving-needle.svg");
               transform: rotate(10deg);
               transition: all 2.5s ease-in-out;
               z-index: 0;
@@ -333,7 +333,7 @@ html {
 
             &.bg {
               background: {
-                image: url("../images/gauge-moisture-detail.svg");
+                image: url("../images/gauge-barometer-detail.svg");
                 size: 94%;
                 position: center;
               }
@@ -379,7 +379,7 @@ html {
             }
           }
 
-          &.moisture {
+          &.barometer {
             .border,
             .raindrop {
               animation: raindrop-fall 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
