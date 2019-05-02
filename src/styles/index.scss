@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import './animations.scss';
 $color-light: #fff;
 $color-dark: #000;
 $base-font-size: 16px;
 
-body {
+html, body {
   font-size: $base-font-size;
   color: $color-dark;
   font-family: 'Roboto Condensed', sans-serif;
@@ -336,162 +337,62 @@ body {
         }
       }
 
-      .gauge-wrap.on .gauge.compass .detail,
-      .gauge-wrap:hover .gauge.compass .detail {
-        animation: gauge-compass-animation 6s infinite;
-      }
+      &.on,
+      &:hover {
+        .gauge {
+          &.compass {
+            .detail {
+              animation: {
+                name: gauge-compass-animation;
+                duration: 6s;
+                iteration-count: infinite;
+              }
+            }
+          }
 
-      .gauge-wrap.on .gauge.quality .detail,
-      .gauge-wrap:hover .gauge.quality .detail {
-        animation: gauge-quality-animation 120ms infinite;
-        animation-delay: 120ms;
-        transform: rotate(14deg);
-      }
+          &.quality {
+            .detail {
+              animation: {
+                name: gauge-quality-animation;
+                duration: 120ms;
+                iteration-count: infinite;
+                delay: 120ms;
+              }
+              transform: rotate(14deg);
+            }
+          }
 
-      .gauge-wrap.on .gauge.fit .detail,
-      .gauge-wrap:hover .gauge.fit .detail {
-        animation: gauge-fit-animation 5s infinite;
-        animation-delay: 120ms;
-      }
+          &.fit {
+            .detail {
+              animation: {
+                name: gauge-fit-animation;
+                duration: 5s;
+                iteration-count: infinite;
+                delay: 120ms;
+              }
+            }
+          }
 
-      .gauge-wrap.on .gauge.moisture .detail.fog,
-      .gauge-wrap:hover .gauge.moisture .detail.fog {
-        transition: opacity 3s ease-out;
-        opacity: 0.85;
-      }
+          &.moisture {
+            .border,
+            .raindrop {
+              animation: raindrop-fall 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+              animation-fill-mode: forwards;
+            }
 
-      .gauge-wrap.on .gauge.moisture .detail.detail3,
-      .gauge-wrap:hover .gauge.moisture .detail.detail3 {
-        transform: rotate(-80deg);
-      }
+            .detail {
+              &.fog {
+                transition: opacity 3s ease-out;
+                opacity: 0.85;
+              }
 
-      .gauge-wrap.on .gauge.moisture .border,
-      .gauge-wrap.on .gauge.moisture .raindrop,
-      .gauge-wrap:hover .gauge.moisture .border,
-      .gauge-wrap:hover .gauge.moisture .raindrop {
-        animation: raindrop-fall 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        animation-fill-mode: forwards;
-      }
-      @media (max-width: 767px) {
-        .gauge-top,
-        .gauge-wrap {
-          padding-left: 0;
-          padding-right: 0;
-        }
-
-        .gauge-top p {
-          margin-left: 1em;
+              &.detail3 {
+                transform: rotate(-80deg);
+              }
+            }
+          }
         }
       }
     }
-  }
-}
-@keyframes gauge-compass-animation {
-  0% {
-    transform: rotate(-20deg);
-  }
-
-  1% {
-    transform: rotate(-40deg);
-  }
-
-  10% {
-    transform: rotate(705deg);
-  }
-
-  22% {
-    transform: rotate(709deg);
-  }
-
-  40% {
-    transform: rotate(700deg);
-  }
-
-  82% {
-    transform: rotate(712deg);
-  }
-
-  100% {
-    transform: rotate(705deg);
-  }
-}
-@keyframes gauge-fit-animation {
-  0% {
-    top: 0.00em;
-    left: 0.00em;
-  }
-
-  15% {
-    top: -0.15em;
-    left: 0.08em;
-  }
-
-  30% {
-    top: -0.25em;
-    left: 0.25em;
-  }
-
-  43% {
-    top: 0.17em;
-    left: 0.20em;
-  }
-
-  55% {
-    top: 0.13em;
-    left: -0.17em;
-  }
-
-  65% {
-    top: 0.00em;
-    left: 0.00em;
-  }
-
-  85% {
-    top: 0.00em;
-    left: 0.00em;
-  }
-}
-@keyframes gauge-quality-animation {
-  0% {
-    transform: rotate(14.0deg);
-  }
-
-  4% {
-    transform: rotate(13.3deg);
-  }
-
-  23% {
-    transform: rotate(14.5deg);
-  }
-
-  46% {
-    transform: rotate(13.0deg);
-  }
-
-  68% {
-    transform: rotate(14.0deg);
-  }
-
-  77% {
-    transform: rotate(12.1deg);
-  }
-
-  81% {
-    transform: rotate(14.2deg);
-  }
-
-  100% {
-    transform: rotate(13.6deg);
-  }
-}
-@keyframes raindrop-fall {
-  0% {
-    opacity: 0;
-    transform: rotate(180deg) scale(2.5, 2.3) rotateY(0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: rotate(180deg) scale(1, 1) rotateY(0);
   }
 }

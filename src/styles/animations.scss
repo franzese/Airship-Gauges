@@ -1,0 +1,110 @@
+
+@keyframes gauge-compass-animation {
+  0% {
+    transform: rotate(-20deg);
+  }
+
+  1% {
+    transform: rotate(-40deg);
+  }
+
+  10% {
+    transform: rotate(705deg);
+  }
+
+  22% {
+    transform: rotate(709deg);
+  }
+
+  40% {
+    transform: rotate(700deg);
+  }
+
+  82% {
+    transform: rotate(712deg);
+  }
+
+  100% {
+    transform: rotate(705deg);
+  }
+}
+@keyframes gauge-fit-animation {
+  0% {
+    top: 0.00em;
+    left: 0.00em;
+  }
+
+  15% {
+    top: -0.15em;
+    left: 0.08em;
+  }
+
+  30% {
+    top: -0.25em;
+    left: 0.25em;
+  }
+
+  43% {
+    top: 0.17em;
+    left: 0.20em;
+  }
+
+  55% {
+    top: 0.13em;
+    left: -0.17em;
+  }
+
+  65% {
+    top: 0.00em;
+    left: 0.00em;
+  }
+
+  85% {
+    top: 0.00em;
+    left: 0.00em;
+  }
+}
+@keyframes gauge-quality-animation {
+  0% {
+    transform: rotate(14.0deg);
+  }
+
+  4% {
+    transform: rotate(13.3deg);
+  }
+
+  23% {
+    transform: rotate(14.5deg);
+  }
+
+  46% {
+    transform: rotate(13.0deg);
+  }
+
+  68% {
+    transform: rotate(14.0deg);
+  }
+
+  77% {
+    transform: rotate(12.1deg);
+  }
+
+  81% {
+    transform: rotate(14.2deg);
+  }
+
+  100% {
+    transform: rotate(13.6deg);
+  }
+}
+@keyframes raindrop-fall {
+  0% {
+    opacity: 0;
+    transform: rotate(180deg) scale(2.5, 2.3) rotateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(180deg) scale(1, 1) rotateY(0);
+  }
+}
