@@ -4,7 +4,8 @@ $color-light: #fff;
 $color-dark: #000;
 $base-font-size: 10px;
 
-html, body {
+body,
+html {
   font-size: $base-font-size;
   color: $color-dark;
   font-family: 'Roboto Condensed', sans-serif;
@@ -19,17 +20,24 @@ html, body {
       display: flex;
       justify-content: flex-start;
 
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        margin: 0;
-        font-size: 4rem;
-      }
+      .gauge-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-      p {
-        font-size: 2.2rem;
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          margin: 0;
+          font-size: 4rem;
+        }
+
+        p {
+          margin: 0;
+          font-size: 2.2rem;
+        }
       }
 
       .gauge-bezel {
