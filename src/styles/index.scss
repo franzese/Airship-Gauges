@@ -2,7 +2,7 @@
 @import './animations.scss';
 $color-light: #fff;
 $color-dark: #000;
-$base-font-size: 16px;
+$base-font-size: 10px;
 
 html, body {
   font-size: $base-font-size;
@@ -25,28 +25,27 @@ html, body {
       h5,
       h6 {
         margin: 0;
-        font-size: 2.4rem;
+        font-size: 4rem;
       }
 
       p {
-        font-size: 1.5rem;
+        font-size: 2.2rem;
       }
 
       .gauge-bezel {
         display: inline-block;
         position: relative;
         float: left;
-        font-size: 100px;
         margin-right: 2rem;
-        height: 1.1em;
-        width: 1.1em;
-        min-width: 1.1em;
+        height: 11rem;
+        width: 11rem;
+        min-width: 11rem;
         z-index: 1;
       }
 
       .gauge {
         overflow: hidden;
-        border-radius: 0.1em;
+        border-radius: 1rem;
         width: 100%;
         height: 100%;
         position: relative;
@@ -96,8 +95,8 @@ html, body {
             background-image: url("../images/gauge-quality-detail.svg");
             height: 200%;
             width: 200%;
-            top: -0.55em;
-            left: 0.1em;
+            top: -5.5rem;
+            left: 1rem;
             transform: rotate(0deg);
             transition: all 120ms ease-in;
           }
