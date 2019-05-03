@@ -123,11 +123,11 @@
 
 @keyframes gauge-barometer-needle-animation {
   0% {
-    transform: rotate(10.0deg);
+    transform: rotate(-80deg);
   }
 
   100% {
-    transform: rotate(10deg);
+    transform: rotate(-90deg);
   }
 }
 
