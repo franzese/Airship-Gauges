@@ -1,4 +1,6 @@
-@mixin raindrop($i, $height, $width, $top, $left, $bgx, $bgy, $adelay, $shadowblur) {
+@mixin raindrop($i, $height, $top, $left, $bgx, $bgy, $adelay, $shadowblur) {
+  $width: $height * 0.85;
+
   .border.border-#{$i} {
     height: $height;
     top: $top;

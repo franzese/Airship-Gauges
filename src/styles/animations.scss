@@ -97,6 +97,40 @@
     transform: rotate(13.6deg);
   }
 }
+
+@keyframes gauge-barometer-fog-animation {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.85;
+  }
+
+  50% {
+    opacity: 0.45;
+  }
+
+  75% {
+    opacity: 0.62;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes gauge-barometer-needle-animation {
+  0% {
+    transform: rotate(10.0deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
 @keyframes gauge-barometer-raindrop-animation {
   0% {
     opacity: 0;
@@ -105,6 +139,7 @@
 
   100% {
     opacity: 1;
+
     transform: rotate(180deg) scale(1, 1) rotateY(0);
   }
 }
