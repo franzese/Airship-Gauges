@@ -229,7 +229,7 @@ section {
             z-index: 0;
             animation: {
               name: gauge-barometer-needle-animation;
-              duration: 1200ms;
+              duration: 5s;
               direction: alternate;
               iteration-count: infinite;
               delay: 1600ms;
