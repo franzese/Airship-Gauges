@@ -1,21 +1,34 @@
 @mixin raindrop($i, $height, $top, $left, $bgx, $bgy, $adelay, $shadowblur) {
   $width: $height * 0.85;
 
-  .border.border-#{$i} {
-    height: $height;
+  .raindrop-#{$i} {
+    margin-top: 0;
+    position: absolute;
     top: $top;
     left: $left;
-    animation-delay: $adelay;
-    width: $width * 0.6;
-    box-shadow: 0 0 0 $shadowblur $color-dark;
-  }
+    animation: {
+      name: gauge-barometer-raindrop-drip;
+      delay: $adelay;
+      duration: 8s;
+      timing-function: ease-out;
+      iteration-count: infinite;
+    }
 
-  .raindrop.raindrop-#{$i} {
-    height: $height;
-    top: $top;
-    left: $left;
-    animation-delay: $adelay;
-    width: $width;
-    background-position: $bgx $bgy;
+    .border {
+      height: $height;
+      animation-delay: $adelay;
+      width: $width * 0.6;
+      box-shadow: 0 0 0 $shadowblur $color-dark;
+    }
+
+    .raindrop {
+      margin-left: -2px;
+      margin-top: -1px;
+      border-radius: 100%;
+      height: $height;
+      animation-delay: $adelay;
+      width: $width;
+      background-position: $bgx $bgy;
+    }
   }
 }

@@ -1,4 +1,3 @@
-
 @keyframes gauge-compass-animation {
   0% {
     transform: rotate(-20deg);
@@ -30,8 +29,8 @@
 }
 @keyframes gauge-reticle-animation {
   0% {
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
   }
 
   15% {
@@ -55,13 +54,13 @@
   }
 
   65% {
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
   }
 
   85% {
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
   }
 }
 @keyframes gauge-quality-animation {
@@ -97,7 +96,6 @@
     transform: rotate(13.6deg);
   }
 }
-
 @keyframes gauge-barometer-fog-animation {
   0% {
     opacity: 0;
@@ -119,8 +117,6 @@
     opacity: 0;
   }
 }
-
-
 @keyframes gauge-barometer-needle-animation {
   0% {
     transform: rotate(-80deg);
@@ -138,16 +134,46 @@
     transform: rotate(-110deg);
   }
 }
-
-@keyframes gauge-barometer-raindrop-animation {
+@keyframes gauge-barometer-raindrop-appear {
   0% {
     opacity: 0;
-    transform: rotate(180deg) scale(2.5, 2.3) rotateY(0);
+    transform: scale(2.5, 2.3);
+  }
+
+  12% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+
+  99% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+
+  // 50% {
+  //   opacity: 0;
+  //   transform: scale(2.5, 2.3);
+  // }
+
+  100% {
+    opacity: 0;
+    transform: scale(2.5, 2.3);
+  }
+}
+@keyframes gauge-barometer-raindrop-drip {
+  0% {
+    margin-top: 0;
+  }
+
+  70% {
+    margin-top: 0;
+  }
+
+  80% {
+    margin-top: 10rem;
   }
 
   100% {
-    opacity: 1;
-
-    transform: rotate(180deg) scale(1, 1) rotateY(0);
+    margin-top: 10rem;
   }
 }
