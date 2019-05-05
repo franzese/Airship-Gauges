@@ -10,25 +10,43 @@
       name: gauge-barometer-raindrop-drip;
       delay: $adelay;
       duration: 8s;
-      timing-function: ease-out;
+      timing-function: easein;
       iteration-count: infinite;
+    }
+
+    .border, .raindrop {
+      position: absolute;
+      opacity: 0;
+      animation: {
+        name: gauge-barometer-raindrop-appear;
+        delay: $adelay;
+        duration: 8s;
+        timing-function: cubic-bezier(1,0,1,1);
+        iteration-count: infinite;
+      }
     }
 
     .border {
       height: $height;
-      animation-delay: $adelay;
       width: $width * 0.6;
+      border-radius: 100%;
       box-shadow: 0 0 0 $shadowblur $color-dark;
     }
 
     .raindrop {
-      margin-left: -2px;
-      margin-top: -1px;
+      margin: {
+        left: -2px;
+        top: -1px;
+      }
       border-radius: 100%;
       height: $height;
-      animation-delay: $adelay;
       width: $width;
-      background-position: $bgx $bgy;
+      background: {
+        position: $bgx $bgy;
+        color: $color-dark;
+        image: url("../images/gauge-barometer-raindrop.png");
+        size: 1000%;
+      }
     }
   }
 }
