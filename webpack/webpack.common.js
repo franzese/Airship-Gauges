@@ -23,7 +23,14 @@ module.exports = {
       { from: Path.resolve(__dirname, '../public'), to: 'public' }
     ]),
     new HtmlWebpackPlugin({
-      template: Path.resolve(__dirname, '../src/index.html')
+      title: 'Default Gauges',
+      template: Path.resolve(__dirname, '../src/index.html'),
+      filename: '../docs/index.html' //relative to root of the application
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Airship Gauges',
+      template: Path.resolve(__dirname, '../src/airship.html'),
+      filename: '../docs/airship.html' //relative to root of the application
     })
   ],
   resolve: {
