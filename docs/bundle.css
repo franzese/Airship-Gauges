@@ -98,19 +98,50 @@
   63% {
     margin-top: 0; }
   70% {
-    margin-top: 10rem; }
+    margin-top: 100%; }
   100% {
-    margin-top: 10rem; } }
+    margin-top: 100%; } }
+
+.non-airship aside {
+  position: fixed;
+  margin: 1rem;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  max-width: 40vw; }
+  .non-airship aside p {
+    font-size: 2rem;
+    margin: 1rem;
+    color: #000;
+    text-shadow: -1px -1px 1px #fff, 1px -1px 1px #fff, -1px 1px 1px #fff, 1px 1px 1px #fff; }
+
+.non-airship section {
+  justify-content: center;
+  align-items: center; }
+  .non-airship section .gauge-wrap {
+    justify-content: center; }
+    .non-airship section .gauge-wrap .gauge-bezel {
+      margin: 1rem;
+      min-width: 20vh;
+      min-height: 20vh; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 body,
 html {
   font-size: 10px;
   color: #000;
   font-family: 'Roboto Condensed', sans-serif;
-  margin: 0; }
+  overflow-x: hidden;
+  overflow-y: auto; }
 
 section {
-  margin: 2rem;
+  padding: 2rem;
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; }
@@ -139,8 +170,7 @@ section {
       margin-top: 2rem;
       margin-right: 2rem;
       margin-bottom: 2rem;
-      height: 11rem;
-      width: 11rem;
+      min-height: 11rem;
       min-width: 11rem;
       z-index: 1; }
     section .gauge-wrap .gauge {
@@ -191,6 +221,10 @@ section {
           animation-iteration-count: infinite;
           animation-delay: 500ms;
           transform: rotate(14deg); }
+          section .gauge-wrap .gauge.quality .detail transition {
+            property: all;
+            duration: 500ms;
+            timing-function: ease-out; }
       section .gauge-wrap .gauge.reticle {
         background-image: url(src/images/gauge-reticle-bg.svg); }
         section .gauge-wrap .gauge.reticle .detail {
@@ -210,8 +244,8 @@ section {
         section .gauge-wrap .gauge.barometer .detail.raindrops .raindrop-1 {
           margin-top: 0;
           position: absolute;
-          top: 7.9rem;
-          left: 4.2rem;
+          top: 71.1%;
+          left: 37.8%;
           animation-name: gauge-barometer-raindrop-drip;
           animation-delay: 0.5s;
           animation-duration: 8s;
@@ -243,8 +277,8 @@ section {
         section .gauge-wrap .gauge.barometer .detail.raindrops .raindrop-2 {
           margin-top: 0;
           position: absolute;
-          top: 7.4rem;
-          left: 7rem;
+          top: 66.6%;
+          left: 63%;
           animation-name: gauge-barometer-raindrop-drip;
           animation-delay: 0.66s;
           animation-duration: 8s;
@@ -276,8 +310,8 @@ section {
         section .gauge-wrap .gauge.barometer .detail.raindrops .raindrop-3 {
           margin-top: 0;
           position: absolute;
-          top: 2.3rem;
-          left: 6rem;
+          top: 20.7%;
+          left: 54%;
           animation-name: gauge-barometer-raindrop-drip;
           animation-delay: 0.75s;
           animation-duration: 8s;
@@ -309,8 +343,8 @@ section {
         section .gauge-wrap .gauge.barometer .detail.raindrops .raindrop-4 {
           margin-top: 0;
           position: absolute;
-          top: 3.6rem;
-          left: 3.7rem;
+          top: 32.4%;
+          left: 33.3%;
           animation-name: gauge-barometer-raindrop-drip;
           animation-delay: 1s;
           animation-duration: 8s;
@@ -342,8 +376,8 @@ section {
         section .gauge-wrap .gauge.barometer .detail.raindrops .raindrop-5 {
           margin-top: 0;
           position: absolute;
-          top: 3.5rem;
-          left: 2.2rem;
+          top: 31.5%;
+          left: 19.8%;
           animation-name: gauge-barometer-raindrop-drip;
           animation-delay: 1.3s;
           animation-duration: 8s;
@@ -375,8 +409,8 @@ section {
         section .gauge-wrap .gauge.barometer .detail.raindrops .raindrop-6 {
           margin-top: 0;
           position: absolute;
-          top: 4.9rem;
-          left: 6.3rem;
+          top: 44.1%;
+          left: 56.7%;
           animation-name: gauge-barometer-raindrop-drip;
           animation-delay: 1.6s;
           animation-duration: 8s;
@@ -408,8 +442,8 @@ section {
         section .gauge-wrap .gauge.barometer .detail.raindrops .raindrop-7 {
           margin-top: 0;
           position: absolute;
-          top: 6.4rem;
-          left: 2.1rem;
+          top: 57.6%;
+          left: 18.9%;
           animation-name: gauge-barometer-raindrop-drip;
           animation-delay: 1.7s;
           animation-duration: 8s;
@@ -441,8 +475,8 @@ section {
         section .gauge-wrap .gauge.barometer .detail.raindrops .raindrop-8 {
           margin-top: 0;
           position: absolute;
-          top: 5.4rem;
-          left: 8.3rem;
+          top: 45%;
+          left: 74.7%;
           animation-name: gauge-barometer-raindrop-drip;
           animation-delay: 2.2s;
           animation-duration: 8s;
