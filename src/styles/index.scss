@@ -133,12 +133,14 @@ section {
             iteration-count: infinite;
             delay: 500ms;
           }
-          transform: rotate(14deg);
-          transition {
+          transform: rotate(0deg);
+          transform: rotate(18deg);
+          transition: {
             property: all;
             duration: 500ms;
-            timing-function: ease-out;
+            timing-function: ease-in-out;
           }
+
         }
       }
       // PERFECT FIT GAUGE
