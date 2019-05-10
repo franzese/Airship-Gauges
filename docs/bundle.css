@@ -220,17 +220,17 @@ section {
           animation-duration: 120ms;
           animation-iteration-count: infinite;
           animation-delay: 500ms;
-          transform: rotate(14deg); }
-          section .gauge-wrap .gauge.quality .detail transition {
-            property: all;
-            duration: 500ms;
-            timing-function: ease-out; }
+          transform: rotate(0deg);
+          transform: rotate(18deg);
+          transition-property: all;
+          transition-duration: 500ms;
+          transition-timing-function: ease-in-out; }
       section .gauge-wrap .gauge.reticle {
         background-image: url(src/images/gauge-reticle-bg.svg); }
         section .gauge-wrap .gauge.reticle .detail {
+          background-image: url(src/images/gauge-reticle-detail.svg);
           opacity: 0.4;
           z-index: -1;
-          background-image: url(src/images/gauge-reticle-detail.svg);
           animation-name: gauge-reticle-animation;
           animation-duration: 5s;
           animation-iteration-count: infinite;
