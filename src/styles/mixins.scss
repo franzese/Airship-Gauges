@@ -1,3 +1,7 @@
+@mixin gaugeImg($img) {
+  background-image: url($gauge-image-path + $img);
+}
+
 @mixin raindrop($i, $height, $top, $left, $bgx, $bgy, $adelay, $shadowblur) {
   $width: $height * 0.85;
 
@@ -44,7 +48,7 @@
       background: {
         position: $bgx $bgy;
         color: $gauge-color-dark;
-        image: url("../images/gauge-barometer-raindrop.png");
+        image: url($gauge-image-path + 'gauge-barometer-raindrop.png');
         size: 1000%;
       }
     }

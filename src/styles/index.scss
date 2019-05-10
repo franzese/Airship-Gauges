@@ -104,10 +104,10 @@ section {
       }
       // STRATEGIC SEPARATION GAUGE
       &.compass {
-        background-image: url("../images/gauge-compass-bg.svg");
+        @include gaugeImg('gauge-compass-bg.svg');
 
         .detail {
-          background-image: url("../images/gauge-compass-detail.svg");
+          @include gaugeImg('gauge-compass-detail.svg');
           transform: rotate(-20deg);
           z-index: 1;
           animation: {
@@ -119,10 +119,10 @@ section {
       }
       // QUALITY MATERIALS GAUGE
       &.quality {
-        background-image: url("../images/gauge-quality-bg.svg");
+        @include gaugeImg('gauge-quality-bg.svg');
 
         .detail {
-          background-image: url("../images/gauge-quality-detail.svg");
+          @include gaugeImg('gauge-quality-detail.svg');
           height: 200%;
           width: 200%;
           top: -50%;
@@ -145,12 +145,12 @@ section {
       }
       // PERFECT FIT GAUGE
       &.reticle {
-        background-image: url("../images/gauge-reticle-bg.svg");
+        @include gaugeImg('gauge-reticle-bg.svg');
 
         .detail {
+          @include gaugeImg('gauge-reticle-detail.svg');
           opacity: 0.4;
           z-index: -1;
-          background-image: url("../images/gauge-reticle-detail.svg");
           animation: {
             name: gauge-reticle-animation;
             duration: 5s;
@@ -163,7 +163,7 @@ section {
       &.barometer {
         .detail {
           &.fg {
-            background-image: url("../images/gauge-cover.svg");
+            @include gaugeImg('gauge-cover.svg');
             z-index: 5;
           }
 
@@ -185,7 +185,7 @@ section {
           &.fog {
             opacity: 0;
             border-radius: 1em;
-            background-color: $color-light;
+            background-color: $gauge-color-light;
             overflow: hidden;
             position: absolute;
             top: 0;
@@ -202,13 +202,13 @@ section {
           }
 
           &.fixed-needle {
-            background-image: url("../images/gauge-barometer-fixed-needle.svg");
+            @include gaugeImg('gauge-barometer-fixed-needle.svg');
             transform: rotate(40deg);
             z-index: 0;
           }
 
           &.moving-needle {
-            background-image: url("../images/gauge-barometer-moving-needle.svg");
+            @include gaugeImg('gauge-barometer-moving-needle.svg');
             z-index: 0;
             animation: {
               name: gauge-barometer-needle-animation;
@@ -221,8 +221,8 @@ section {
           }
 
           &.bg {
+            @include gaugeImg('gauge-barometer-detail.svg');
             background: {
-              image: url("../images/gauge-barometer-detail.svg");
               size: 94%;
               position: center;
             }
