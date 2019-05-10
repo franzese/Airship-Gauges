@@ -10,8 +10,8 @@
     p {
       font-size: 2rem;
       margin: 1rem;
-      color: $color-dark;
-      text-shadow: -1px -1px 1px $color-light, 1px -1px 1px $color-light, -1px 1px 1px $color-light, 1px 1px 1px $color-light;
+      color: $gauge-color-dark;
+      text-shadow: -1px -1px 1px $gauge-color-light, 1px -1px 1px $gauge-color-light, -1px 1px 1px $gauge-color-light, 1px 1px 1px $gauge-color-light;
     }
   }
 

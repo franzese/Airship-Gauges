@@ -12,8 +12,8 @@
 
 body,
 html {
-  font-size: $base-font-size;
-  color: $color-dark;
+  font-size: $gauge-base-font-size;
+  color: $gauge-color-dark;
   font-family: 'Roboto Condensed', sans-serif;
   overflow: {
     x: hidden;
@@ -84,7 +84,7 @@ section {
         position: absolute;
         height: 100%;
         width: 100%;
-        background: $color-light;
+        background: $gauge-color-light;
         z-index: -10;
         border-radius: 100%;
       }

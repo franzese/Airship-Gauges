@@ -30,7 +30,7 @@
       height: $height;
       width: $width * 0.6;
       border-radius: 100%;
-      box-shadow: 0 0 0 $shadowblur $color-dark;
+      box-shadow: 0 0 0 $shadowblur $gauge-color-dark;
     }
 
     .raindrop {
@@ -43,7 +43,7 @@
       width: $width;
       background: {
         position: $bgx $bgy;
-        color: $color-dark;
+        color: $gauge-color-dark;
         image: url("../images/gauge-barometer-raindrop.png");
         size: 1000%;
       }
